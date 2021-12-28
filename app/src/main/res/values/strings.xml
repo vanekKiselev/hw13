@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Контроль давления</string>
+    <string name="toolbarTitle">Комплексная система мониторинга здоровья</string>
+    <string name="toolbarAuthor">Автор: Киселев И.А.</string>
+    <string name="saveBtn">Сохранить</string>
+    <string name="patientData">\u25c0 Данные пациента</string>
+    <string name="currentDate">Текущая\nдата</string>
+    <string name="pokazateli">Показатели</string>
+    <string name="davlenie">Давление</string>
+    <string name="age">Возраст</string>
+    <string name="tachy">Тахикардия</string>
+    <string name="datazamera">Дата замера</string>
+    <string name="kolvoshagov">Количество шагов</string>
+    <string name="fio">ФИО пациента</string>
+
+</resources>

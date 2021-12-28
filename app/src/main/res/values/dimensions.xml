@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elementsLeftMargin">40dp</dimen>
+    <dimen name="topElementMargin">180dp</dimen>
+    <dimen name="lowerButtonsTopMargin">580dp</dimen>
+
+
+</resources>

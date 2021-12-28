@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorToolbarBG">#495552</color>
+    <color name="colorActivityBG">#869792</color>
+    <color name="colorToolbarText">#FFFFFF</color>
+    <color name="colorWrongData">#E88585</color>
+    <color name="colorRightData">#FFFFFF</color>
+
+</resources>

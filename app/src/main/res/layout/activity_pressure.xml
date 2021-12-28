@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PressureActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/upperPressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="@dimen/topElementMargin"
+        android:text="Верхнее давление"
+        android:textStyle="bold"
+        android:textSize="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/upperPressureInput"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="176dp"
+        android:background="#ffffff"
+        android:textAlignment="center"
+
+
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/lowerPressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+
+        android:text="Нижнее давление"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperPressureText" />
+
+    <EditText
+        android:id="@+id/lowerPressureInput"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:background="#ffffff"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+
+
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/pulseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+
+        android:text="Пульс"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowerPressureText" />
+
+    <TextView
+        android:id="@+id/tachiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+
+        android:text="@string/tachy"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pulseText" />
+
+
+    <EditText
+        android:id="@+id/pulseInput"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="284dp"
+        android:background="#ffffff"
+        android:textAlignment="center"
+
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="32dp"
+        android:text="@string/datazamera"
+
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tachiText" />
+
+    <CheckBox
+        android:id="@+id/tachicardyBox"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:buttonTint="#000000"
+
+
+        android:layout_marginTop="337dp"
+        android:background="#ffffff"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="@dimen/lowerButtonsTopMargin"
+        android:onClick="savePressureData"
+        android:text="@string/saveBtn"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="16dp"
+        android:onClick="goBack"
+        android:text="@string/patientData"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="391dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="28/06 17:30"
+        android:inputType="datetime"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/currentDateButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="setCurrentDate"
+        android:text="@string/currentDate"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/dateInput"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

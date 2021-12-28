@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientDataActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/nameText"
+        style="@android:style/Widget.Material.Light.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:textStyle="bold"
+
+        android:layout_marginTop="@dimen/topElementMargin"
+        android:layerType="software"
+        android:text="@string/fio"
+        android:textSize="16dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/nameInputZone"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Иванов Иван Иванович"
+        android:inputType="textPersonName"
+
+        android:paddingLeft="4dp"
+        android:text=""
+        android:textAlignment="textStart"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:text="@string/age"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputZone" />
+
+    <EditText
+        android:id="@+id/ageInputZone"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorRightData"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="@dimen/lowerButtonsTopMargin"
+        android:onClick="savePatient"
+        android:text="@string/saveBtn"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/goLifeParButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/elementsLeftMargin"
+        android:layout_marginTop="16dp"
+        android:onClick="gotoLifeParametersActivity"
+        android:text="@string/pokazateli"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+    <Button
+        android:id="@+id/goPressureButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/elementsLeftMargin"
+        android:onClick="gotoPressureActivity"
+        android:text="@string/davlenie"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/goLifeParButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
